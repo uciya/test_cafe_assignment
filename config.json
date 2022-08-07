@@ -1,0 +1,21 @@
+{
+    "target_env": { 
+        "baseUrl": "https://www.saucedemo.com/",
+        "valid_username": "standard_user",
+        "valid_password": "secret_sauce",
+        "inventory_address": "inventory.html",
+        "cart_address": "cart.html",
+        "checkout_one_address": "checkout-step-one.html",
+        "checkout_two_address": "checkout-step-two.html" 
+    },
+
+    "dev_evn": {
+        "baseUrl": "temp",
+        "valid_username": "temp",
+        "valid_password": "temp",
+        "inventory_address": "temp",
+        "cart_address": "temp",
+        "checkout_one_address": "temp",
+        "checkout_two_address": "temp" 
+    }
+}

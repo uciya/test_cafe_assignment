@@ -19,7 +19,7 @@ test('Check total sum of cart', async t => {
     await InventoryPage.ensure_page();
     await InventoryPage.add_item_to_cart(item_count);
     await InventoryPage.verify_item_count(item_count);
-    await t.wait(3000);
+    //await t.wait(3000);
     await InventoryPage.go_to_cart();
 
     await CartPage.ensure_page();
@@ -34,6 +34,6 @@ test('Check total sum of cart', async t => {
     await CheckoutTwoPage.ensure_page();
     await CheckoutTwoPage.verify_item_count(item_count);
     await CheckoutTwoPage.verify_total_price_wo_tax();
-    await t.wait(5000);
+    //await t.wait(5000);
 });
 

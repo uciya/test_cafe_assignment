@@ -1,18 +1,13 @@
-import { Selector, t, ClientFunction } from 'testcafe';
-import config from '../config'
+import { Selector, t } from 'testcafe';
+import BasePage from './BasePage';
 
-class InventoryPage {
+class InventoryPage extends BasePage {
     constructor () {
+        super();
         this.inventory_items         = Selector('.inventory_item');
         this.cart_link               = Selector('.shopping_cart_link');
         this.cart_item_count         = Selector('.shopping_cart_badge');
     }
-
-    async ensure_page(){
-        let current_url = ClientFunction(() => window.location.href);
-        await t
-            .expect(current_url()).contains(`${config.target_env.inventory_address}`);
-        }
     
     async add_item_to_cart(item_count_to_add) {
         let target_item = null;

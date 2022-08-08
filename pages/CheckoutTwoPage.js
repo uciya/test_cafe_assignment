@@ -1,17 +1,12 @@
-import { Selector, t, ClientFunction } from 'testcafe';
-import config from '../config'
+import { Selector, t } from 'testcafe';
+import BasePage from './BasePage';
 
-class CheckoutTwoPage {
+class CheckoutTwoPage extends BasePage {
     constructor () {
+        super();
         this.cart_items              = Selector('.cart_item');
         this.item_price_wo_tax       = Selector('.summary_subtotal_label');
     }
-
-    async ensure_page(){
-        let current_url = ClientFunction(() => window.location.href);
-        await t
-            .expect(current_url()).contains(`${config.target_env.checkout_two_address}`);
-        }
 
     async verify_item_count(added_item_count) {
         let cart_item_count = await this.cart_items.count;

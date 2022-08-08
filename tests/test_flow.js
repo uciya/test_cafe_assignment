@@ -11,7 +11,7 @@ import CheckoutTwoPage from '../pages/CheckoutTwoPage';
 fixture `Swag Labs Flow Automation`
     .page `${config.target_env.baseUrl}`;
 
-test('Check total sum of cart', async t => {
+test('Check total price of cart', async t => {
     let case_params = test_params.dataset_1;
     let item_count = case_params.item_count_to_add;
     await LoginPage.login(`${config.target_env.valid_username}`, `${config.target_env.valid_password}`);

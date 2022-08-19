@@ -1,4 +1,6 @@
 {
+    "environment": "target_env",
+    
     "target_env": { 
         "baseUrl": "https://www.saucedemo.com/",
         "valid_username": "standard_user",
